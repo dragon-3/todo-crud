@@ -1,0 +1,69 @@
+body {
+    
+    background: rgb(29, 29, 29);
+    color: white;
+}
+
+h1 {
+    margin: 100px;
+}
+
+
+
+.add-section {
+    margin: 0 auto;
+    width: 66%;
+    background: rgb(56, 56, 56);
+    margin-bottom: 20px;
+    height: 54px;
+    padding-top: 10px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.inputs input {
+    width: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: none;
+    height: 20px;
+    margin-top: 4px;
+    
+}
+.button button {
+    margin-top: 16px;
+    margin-left: 20px;
+    height: 26px;
+    width: 70px;
+    border: none;
+    border-radius: 18px;
+    background: rgb(218, 140, 140);
+
+}
+
+.table table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 66%;
+}
+
+th, tr, td {
+    border: solid thin white;
+    padding: 12px;
+    width: 100px;
+}
+
+table button {
+    margin: 6px;
+    height: 40px;
+    width: 70px;
+    border: none;
+    border-radius: 18px;
+    background: rgb(218, 140, 140);
+}

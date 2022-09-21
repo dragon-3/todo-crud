@@ -1,0 +1,17 @@
+.form {
+    margin-top: 100px;
+}
+
+form input{
+    height: 30px;
+    text-align: center;
+}
+
+button {
+    margin-top: 40px;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 80px;
+    background: rgb(187, 60, 60);
+}
