@@ -14,7 +14,7 @@ function Home() {
 
     useEffect(() => {
         getAllData();
-    }, [])
+    }, [data])
 
     const getAllData = () => {
         fetch(url)
