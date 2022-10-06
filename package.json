@@ -1,5 +1,6 @@
 {
   "name": "todo-crud",
+  "homepage": "https://todo-crud-json-server2.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
