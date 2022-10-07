@@ -4,7 +4,7 @@ const router = jsonServer.router('./db.json');
 const middlewares = jsonServer.defaults({
     static: "./build",
 });
-const PORT = process.env.PORT || 8000;
+// const PORT = process.env.PORT || 8000;
 
 server.use(middlewares);
 server.use(
@@ -14,6 +14,6 @@ server.use(
 )
 
 server.use(router);
-server.listen(PORT, () => {
-    console.log(`Server running on port: ${PORT}`)
+server.listen(process.env.PORT || 3000, () => {
+    console.log(`Server running`)
 });
