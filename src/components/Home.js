@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Home() {
 
     const [data, setData] = useState([]);
-    const url = `http://localhost:3001/todos/`;
+    const url = `https://todo-crud-backend.herokuapp.com/todos/`;
     const [values, setValues] = useState({
         todo: '',
         priority: ''

@@ -7,7 +7,7 @@ function Edit() {
 
     const [data, setData] = useState([]);
     const {id} = useParams();
-    const url = `http://localhost:3001/todos/${id}`;
+    const url = `https://todo-crud-backend.herokuapp.com/todos/${id}`;
     const [values, setValues] = useState({
         todo: '',
         priority: ''
