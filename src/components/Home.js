@@ -49,7 +49,11 @@ function Home() {
             })
             .then(setValues({
                 task: "", priority: ""
-            }));
+            }))
+            .then(
+                setErrorMessage(false),
+                setErrorNumber(false)
+            );
         }
         
         else {
