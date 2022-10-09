@@ -68,3 +68,24 @@ table button {
 #edit {
     background: #33b249;
 }
+
+@media only screen and (max-width: 630px) {
+
+    .add-section {
+        margin: 0 auto;
+        width: 50%;
+        background: rgb(56, 56, 56);
+        margin-bottom: 20px;
+        height: 150px;
+        padding-top: 10px;
+        border-radius: 20px;
+    }
+
+    .inputs {
+        display: block;
+    }
+
+    .button button {
+        margin-left: 0px;
+    }
+}
