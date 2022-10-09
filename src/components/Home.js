@@ -13,6 +13,8 @@ function Home() {
         todo: '',
         priority: ''
     })
+    const [errorMessage, setErrorMessage] = useState(false)
+    const [errorNumber, setErrorNumber] = useState(false)
 
     useEffect(() => {
         getAllData();
@@ -30,20 +32,29 @@ function Home() {
             ...values, [event.target.name]: event.target.value,
         })
     }
-    
 
-    const addItem = (e) => {
-        fetch(url, {
-            method: "POST",
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                todo: values.task,
-                priority: values.priority
+    const addItem = () => {
+
+        if (isNaN(values.priority)) {
+            setErrorNumber(true)
+        }
+        else if (values.task && values.priority != '') {
+            fetch(url, {
+                method: "POST",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    todo: values.task,
+                    priority: values.priority
+                })
             })
-        })
-        .then(setValues({
-            task: "", priority: ""
-        }));
+            .then(setValues({
+                task: "", priority: ""
+            }));
+        }
+        
+        else {
+            setErrorMessage(true)
+        }
         
     }
 
@@ -56,6 +67,9 @@ function Home() {
     return (
         <div>
             <h1>Crud project</h1>
+
+            {errorMessage ? <h3>Enter a todo & priority</h3> : null}
+            {errorNumber ? <h3>Enter a number</h3> : null}
 
             <div className="main">
                 <div className="content">
