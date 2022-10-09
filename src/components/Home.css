@@ -1,5 +1,4 @@
 body {
-    
     background: rgb(29, 29, 29);
     color: white;
 }
@@ -8,15 +7,14 @@ h1 {
     margin: 100px;
 }
 
-
-
 .add-section {
     margin: 0 auto;
     width: 66%;
     background: rgb(56, 56, 56);
     margin-bottom: 20px;
-    height: 54px;
+    height: 64px;
     padding-top: 10px;
+    border-radius: 20px;
 }
 
 .inputs {
@@ -32,19 +30,19 @@ h1 {
     margin-left: 10px;
     border-radius: 10px;
     border: none;
-    height: 20px;
-    margin-top: 4px;
+    height: 30px;
+    margin-top: 12px;
     
 }
 .button button {
-    margin-top: 16px;
+    margin-top: 12px;
     margin-left: 20px;
-    height: 26px;
-    width: 70px;
+    height: 40px;
+    width: 80px;
     border: none;
     border-radius: 18px;
-    background: rgb(218, 140, 140);
-
+    background: #33b249;
+    font-size: 14px;
 }
 
 .table table {
@@ -65,5 +63,8 @@ table button {
     width: 70px;
     border: none;
     border-radius: 18px;
-    background: rgb(218, 140, 140);
+}
+
+#edit {
+    background: #33b249;
 }

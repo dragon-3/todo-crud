@@ -2,6 +2,8 @@ import React from "react";
 import "./Home.css";
 import {useState, useEffect} from 'react'
 import { Link } from "react-router-dom";
+import { Form, Button } from 'react-bootstrap';
+// import "bootstrap/dist/css/bootstrap.min.css"
 
 function Home() {
 
@@ -30,7 +32,7 @@ function Home() {
     }
     
 
-    const addItem = () => {
+    const addItem = (e) => {
         fetch(url, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
@@ -39,6 +41,10 @@ function Home() {
                 priority: values.priority
             })
         })
+        .then(setValues({
+            task: "", priority: ""
+        }));
+        
     }
 
     const deleteItem = (id) => {
@@ -63,15 +69,13 @@ function Home() {
                             </div> */}
                             <div className="inputs">
                                 <div className="tasks">
-                                    <label htmlFor="">Tasks</label><br />
-                                    <input type="text" name="task" onChange={handleChange}/>
+                                    <input type="text" placeholder="Todo" name="task" onChange={handleChange} value={values.task} />
                                 </div>
                                 <div className="priority">
-                                    <label htmlFor="">Priority</label><br />
-                                        <input type="text" name="priority" onChange={handleChange}/>
+                                    <input type="text" placeholder="Priority" name="priority" onChange={handleChange} value={values.priority} />
                                 </div>
                                 <div className="button">
-                                    <button onClick={addItem}>Add Task</button>
+                                    <button onClick={addItem} >ADD</button>
                                 </div>
                             </div>
                             {/* <div className="inputs">
@@ -103,8 +107,8 @@ function Home() {
                                                     <td>{items.todo}</td>
                                                     <td>{items.priority}</td>
                                                     <td>
-                                                        <Link to={`${items.id}`}><button>EDIT</button></Link>
-                                                        <button onClick={() => deleteItem(items.id)}>DELETE</button>
+                                                        <Link to={`${items.id}`}><button id="edit">EDIT</button></Link>
+                                                        <button id="delete" onClick={() => deleteItem(items.id)}>DELETE</button>
                                                     </td>
                                                 </tr>
                                             )
